@@ -5,6 +5,7 @@ import beforeEach from './beforeEach'
 import auth from '../views/auth/routes'
 import home from '../views/home/routes'
 import personalCenter from '../views/personal-center/routes'
+import pushMessage from '../views/push-message/routes'
 
 Vue.use(Router)
 const originalPush = Router.prototype.push
@@ -15,7 +16,7 @@ const router = new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [
-        ...auth, ...home, ...personalCenter
+        ...auth, ...home, ...personalCenter,...pushMessage,
     ]
 })
 

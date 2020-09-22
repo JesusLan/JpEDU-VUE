@@ -22,6 +22,7 @@
                             label="操作"
                             width="200">
                         <template slot-scope="scope">
+                            <el-button @click="pushMessage()" type="text" size="small">发消息</el-button>
                             <el-button @click="subscribe(scope.row)" v-if="isShowSubscribe(scope.row)" type="text" size="small">关注</el-button>
                             <el-button @click="unsubscribe(scope.row)" v-if="isShowUnsubscribe(scope.row)" type="text" size="small">取消关注</el-button>
                         </template>
@@ -44,6 +45,13 @@
                             prop="created_at"
                             label="加入时间">
                     </el-table-column>
+                    <el-table-column
+                            prop="created_at"
+                            label="加入时间">
+                        <template >
+                            <el-button @click="pushMessage()" type="text" size="small">发消息</el-button>
+                        </template>
+                    </el-table-column>
                 </el-table>
             </el-tab-pane>
         </el-tabs>
@@ -65,6 +73,9 @@
             }
         },
         methods: {
+            pushMessage() {
+                this.$router.push({name: 'PushMessage'})
+            },
             //是否显示订阅按钮
             isShowSubscribe() {
                 if (this.provider !== 'students') {
