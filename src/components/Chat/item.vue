@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="clearfix">
         <div class="chat-content" style="float:right" >
-            <p class="content">{{item.content}}</p>
+            <p class="content">{{item.message}}</p>
         </div>
     </div>
 </template>
@@ -26,19 +26,19 @@
         zoom: 1;
     }
     .chat-content {
-        margin: 10px;
-        padding: 5px;
-        & .content {
-            margin-left: 10px;
-            width: 100%;
-            background-color: #888;
-            color: #fff;
-            height: 35px;
-            line-height: 35px;
-            border-radius: 5px;
-            padding-left: 10px;
-        }
-        & .title {
-        }
-    }
+         margin: 10px;
+         padding: 5px;
+         & .content {
+             margin-left: 10px;
+             width: 100%;
+             background-color: #888;
+             color: #fff;
+             height: 35px;
+             line-height: 35px;
+             border-radius: 5px;
+             padding-left: 10px;
+         }
+         & .title {
+         }
+     }
 </style>

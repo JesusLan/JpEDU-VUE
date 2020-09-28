@@ -1,6 +1,6 @@
 export default [
     {
-        path: '/',
+        path: '/push-message',
         name: 'PushMessage',
         meta: { login: false },
         component: () => import('./push')
